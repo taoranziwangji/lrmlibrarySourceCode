@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/vdo_test_play_image_selector" />
+        
+         <ImageView
+            android:id="@+id/imv_luyin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imv_state"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/vdo_test_record_image_selector" />
+         
+          <ImageView
+            android:id="@+id/imv_bofangluyin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imv_luyin"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/vdo_test_audition_image_selector" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="navdrawer_width">260dp</dimen>
+     <dimen name="vdo_generalpopwindow_width">80.0dip</dimen>
+    <dimen name="vdo_generalpopwindow_xoff">10.0dip</dimen>
+    <dimen name="vdo_generalpopwindow_yoff">5.0dip</dimen>
+</resources>

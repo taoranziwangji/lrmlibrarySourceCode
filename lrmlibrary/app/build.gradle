@@ -1,0 +1,38 @@
+//apply plugin: 'com.android.application' //转变成application还需要添加manifest中的launcher
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        //applicationId "com.vdolrm.lrmlibrary"//Error:Library projects cannot set applicationId. applicationId is set to 'com.vdolrm.lrmlibrary' in default config.
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.soundcloud.android:android-crop:1.0.1@aar'
+    //代替本地的图片裁剪
+    compile 'com.ikimuhendis:ldrawer:0.1'
+    //代替本地的侧边栏滑动变换
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'cn.lightsky.infiniteindicator:library:1.0.5' exclude group: 'com.android.support'
+    // exclude group: ' com.squareup.picasso'
+    //compile 'fr.avianey.com.viewpagerindicator:library:2.4.1' exclude group: 'support' //这个会携带一个v4-r7的包导致重复添加，exclude不掉，所以把源码整合到了代码里
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.jiechic.library:xUtils:2.6.14'
+}
+//打包
+apply from: 'maven-release-aar.gradle'

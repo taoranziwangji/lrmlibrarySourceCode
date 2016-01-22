@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+     
+    <color name="vdo_feature4_ok_normal">#ff7800</color>
+    <color name="vdo_feature4_ok_pressed">#d2691e</color>
+    
+    <color name="vdo_dialog_bg">#26000000</color>
+    <color name="vdo_popwindow_bg">#55000000</color>
+
+    <color name="LightGray">#D3D3D3</color>
+    <color name="Grey">#BEBEBE</color>
+    
+</resources>
