@@ -9,8 +9,8 @@ android {
         //applicationId "com.vdolrm.lrmlibrary"//Error:Library projects cannot set applicationId. applicationId is set to 'com.vdolrm.lrmlibrary' in default config.
         minSdkVersion 8
         targetSdkVersion 22
-        versionCode 1//每次升级时修改versionCode和versionName
-        versionName "1.0.1"//每次升级时修改versionCode和versionName
+        versionCode 2//每次升级时修改versionCode和versionName
+        versionName "1.0.2"//每次升级时修改versionCode和versionName
     }
     buildTypes {
         release {
