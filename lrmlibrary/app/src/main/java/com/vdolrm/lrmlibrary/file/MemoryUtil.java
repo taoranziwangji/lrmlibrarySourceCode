@@ -77,7 +77,8 @@ public class MemoryUtil {
 		if(isExitsSdcard())
 			path = getExternalRootPath();
 		else
-			path = getDataRootPath(context);
+			//path = getDataRootPath(context);
+			path = getDataRootCachePath(context);
 		return path;
 	}
     
@@ -91,17 +92,54 @@ public class MemoryUtil {
 		return path;
 	}
 
+    
+    /**并非获取/data/packagename/下的目录，废弃*/
+    @Deprecated
     public static String getDataRootPath(Context context){
         String path = android.os.Environment.getDataDirectory() + "/data/" + getPackageName(context);
         return path;
     }
 
+    /**并非获取/data/packagename/下的目录，废弃*/
+    @Deprecated
     public static String getDataRootPath(){
         String path = android.os.Environment.getDataDirectory() + "/data/" + UIUtils.getContext().getPackageName();
         return path;
     }
-    
-    
+
+    /**获取/data/packagename/下自定义名字name的目录,有的话会直接返回，没有的话会创建（但文件夹会带app_前缀）*/
+    public static String getDataRootPath(Context context,String name){
+        String path = context.getDir(name,Context.MODE_PRIVATE).toString();
+        return path;
+    }
+
+    /**获取/data/packagename/下自定义名字name的目录,有的话会直接返回，没有的话会创建（但文件夹会带app_前缀）*/
+    public static String getDataRootPath(String name){
+        String path = UIUtils.getContext().getDir(name, Context.MODE_PRIVATE).toString();
+        return path;
+    }
+
+
+    /**
+     * 获取/data/packagename/cache目录
+     *
+     * @return
+     */
+    public static String getDataRootCachePath(Context c){
+        String path = c.getCacheDir().toString();
+        return path;
+    }
+    /**
+     * 获取/data/packagename/cache目录
+     *
+     * @return
+     */
+    public static String getDataRootCachePath(){
+        String path = UIUtils.getContext().getCacheDir().toString();
+        return path;
+    }
+
+
     private static String getPackageName(Context context){
         if(context!=null)
 		    return context.getPackageName();
