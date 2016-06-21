@@ -4,9 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
 
 import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.HttpUtils;
@@ -16,6 +14,7 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.HttpHandler;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
+
 import com.vdolrm.lrmlibrary.bean.FileDownloadInfo;
 import com.vdolrm.lrmlibrary.file.FileDeleteUtil;
 import com.vdolrm.lrmlibrary.file.FileUtils;

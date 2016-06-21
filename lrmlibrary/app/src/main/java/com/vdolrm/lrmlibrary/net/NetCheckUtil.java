@@ -3,7 +3,6 @@ package com.vdolrm.lrmlibrary.net;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.widget.Toast;
 
 public class NetCheckUtil {
 	public static boolean isNetworkConnected(Context context) {  

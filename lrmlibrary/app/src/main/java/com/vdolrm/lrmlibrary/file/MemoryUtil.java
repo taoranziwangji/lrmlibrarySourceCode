@@ -92,7 +92,7 @@ public class MemoryUtil {
 		return path;
 	}
 
-    
+
     /**并非获取/data/packagename/下的目录，废弃*/
     @Deprecated
     public static String getDataRootPath(Context context){
